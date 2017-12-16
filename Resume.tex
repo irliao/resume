@@ -1,0 +1,182 @@
+\documentclass{article}
+    \usepackage{fullpage}
+    \usepackage{amsmath}
+    \usepackage{amssymb}
+    \usepackage{textcomp}
+    \textheight=10in
+    \pagestyle{empty}
+    \raggedright
+    
+\usepackage{geometry}
+ \geometry{
+ left=15mm,
+ right=15mm,
+ top=20mm,
+ bottom=20mm
+ }
+
+    %\renewcommand{\encodingdefault}{cg}
+%\renewcommand{\rmdefault}{lgrcmr}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+% DEFINITIONS FOR RESUME %%%%%%%%%%%%%%%%%%%%%%%
+
+\newcommand{\area} [2] {
+    \vspace*{-9pt}
+    \begin{verse}
+        \textbf{#1}   #2
+    \end{verse}
+}
+
+\newcommand{\lineunder} {
+    \vspace*{-8pt} \\
+    \hspace*{-18pt} \hrulefill \\
+}
+
+\newcommand{\header} [1] {
+    {\hspace*{-18pt}\vspace*{6pt} \large{\textbf{\textsc{#1}}}}
+    \vspace*{-6pt} \lineunder
+}
+
+\newcommand{\employer} [3] {
+    { \textbf{#1} (#2)\\ \underline{\textbf{\emph{#3}}}\\  }
+}
+
+\newcommand{\contact} [3] {
+    \vspace*{-10pt}
+    \begin{center}
+        {\Huge \scshape {#1}}\\
+        #2 \\ #3
+    \end{center}
+    \vspace*{-8pt}
+}
+
+\newenvironment{achievements}{
+    \begin{list}
+        {$\bullet$}{\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}
+    \end{list}
+}
+
+\newcommand{\schoolwithcourses} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+    \vspace*{5pt}
+}
+
+\newcommand{\school} [4] {
+    \textbf{#1} #2 $\bullet$ #3\\
+    #4 \\
+}
+    % END RESUME DEFINITIONS %%%%%%%%%%%%%%%%%%%%%%%
+
+    \begin{document}
+
+\vspace*{-40pt}
+
+%==== Profile ====%
+\vspace*{-10pt}
+\begin{center}
+	{\Large \scshape \textbf{Ryan Liao}}\\
+	$\cdot$ ianryanliao@gmail.com $\cdot$ (858) 267-8838 $\cdot$\\ https://github.com/irliao\\
+\end{center}
+
+\vspace*{2mm}
+
+%==== Experience ====%
+\header{Experience}
+\vspace{1mm}
+
+\textbf{Intuit} \hfill \\
+\textit{Software Engineer I} \hfill August 2015 - Present
+\vspace{-1mm}
+\begin{itemize} \itemsep -1pt
+	\item A
+	\item B
+	\item C
+\end{itemize}
+
+\textbf{Aira.io} \hfill \\
+\textit{Software Developer} \hfill October 2014 - May 2015
+\vspace{-1mm}
+\begin{itemize} \itemsep -1pt
+	\item A
+	\item B
+	\item C
+\end{itemize}
+
+\textbf{Cubic Transportation Systems Inc.} \hfill \\
+\textit{Software Engineering Intern} \hfill June 2014 - August 2015
+\vspace{-1mm}
+\begin{itemize} \itemsep -1pt
+	\item Developed Android applications that detect Gimbal Proximity Beacons to identify user presences in a transit
+	\item Implemented a Node.js local server with MongoDB to handle HTTP requests from three different projects
+	\item Created an Android application that utilizes QR code scanning for users to ride transit systems with a virtual token, replacing the traditional physical ticketing system. Showcased by Cubic at the APTA Expo 2014
+\end{itemize}
+
+\textbf{Gildshire, Inc.} \hfill \\
+\textit{Jr. Web Developer} \hfill April 2014 - June 2014
+\vspace{-1mm}
+\begin{itemize} \itemsep -1pt
+	\item Provided frontend and backend development for the beta release of www.gildshire.com
+	\item Enhanced user experience by integrating AJAX to selectively reload only specific parts of the web page
+	\item Reconstructed the database and backend queries in Python to improve server response time
+\end{itemize}
+
+\textbf{UCSD CSE Tutoring Department} \hfill \\
+\textit{CSE Tutor} \hfill April 2013 - April 2014
+\vspace{-1mm}
+\begin{itemize} \itemsep -1pt
+	\item CSE 100: Helped students implement BST, RST, Huffman Coding, and other data structures in C++
+	\item CSE 110: Assisted students in implementing various Android assignments utilizing Google APIs in Java
+\end{itemize}
+
+\textbf{Northrop Grumman Corp.} \\
+\textit{Software Engineering Intern} \hfill June 2013 - September 2011
+\vspace{-1mm}
+\begin{itemize} \itemsep -1pt
+	\item Implemented target tracking algorithms to process image inputs from actual satellites in C++
+	\item Developed various signal/image processing algorithms utilizing 2D vectors and bitmaps
+	\item Created a desktop application with Java for users to graphically organize complex and nested XML files
+\end{itemize}
+
+%==== Education ====%
+\header{Education}
+\vspace{1mm}
+
+\textbf{University of California, San Diego}\hfill \\
+\textit{B.S. Computer Science} \hfill Fall 2010 - July 2015\\
+\vspace{2mm}
+
+\vspace*{2mm}
+
+%==== Skills ====%
+\header{Skills}
+\vspace{1mm}
+
+\begin{tabular}{ l l }
+	\textbf{Programming Languages:} Java, JavaScript, XML, Bash/Zsh, Lua, Objective C, C++ \\
+	\textbf{Technologies:} Git, Perforce, IntelliJ, Eclipse, xCode \\
+\end{tabular}
+
+\vspace*{2mm}
+
+%==== Projects ====%
+\header{Projects}
+\vspace{1mm}
+
+{\textbf{Mizzo} \hfill June 2014 - May 2015}
+\begin{itemize} \itemsep -1pt
+	\item An iOS application allowing users to network with surrounding people anonymously and securely
+	\item Developed the client side application in native Objective-C  with xCode 6
+	\item Implementing real time messaging functionality with PubNub data stream services
+\end{itemize}
+
+{\textbf{GreenRoads} \hfill December 2013}
+\begin{itemize} \itemsep -1pt
+	\item Awarded 1st place during the Los Angeles CleanWeb Hackathon at the University of Southern California
+	\item Worked in a team of four engineers to create an eco-friendly themed web application within 48 hours
+	\item Designed algorithms to efficiently match riders to drivers utilizing GPS coordinate comparisons
+\end{itemize}
+
+\end{document}
